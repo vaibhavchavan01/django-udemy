@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>django_udemy_app</title>
+</head>
+<body>
+    {% if message %}
+    <script>
+        alert('{{message}}')
+    </script>
+    {% endif %}
+    <form action="/index/" method="post">
+        {% csrf_token %}
+        <h1>Student Resistration Form</h1><br>
+        <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="fname"/><br><br>
+        
+        <label for="middlename">Middle Name</label>
+            <input type="text" id="middlename" name="mname"/><br><br>
+        
+        <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lname"><br><br>
+        
+        <label for="gender">Gender:</label>
+        
+        <label for="text" id="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">&nbsp;&nbsp;
+        
+        <label for="text">female</label>
+            <input type="radio" id="female" name="gender" value="female">&nbsp;&nbsp;
+        
+        <label for="text" >other</label>
+            <input type="radio" id="other" name="gender" value="other"><br><br>
+        
+        <label for="text">Phone:</label>
+            <input type="text" name="mobile" size="10"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html> 
